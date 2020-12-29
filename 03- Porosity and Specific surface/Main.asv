@@ -1,0 +1,30 @@
+clear; close all
+load('A.mat')
+Porosity=1-mean(A(:))
+
+B=bwperim(A);
+figure; imagesc(B(:,:,20)); % visualize the perimeter
+SPS1=sum(B(:))/sum(A(:))
+SPS2=sum(B(:))/sum(1-A(:))
+
+se=zeros(3,3,3); se(2,2,2)=1; se(2,2,3)=1; se(2,2,1)=1; se(2,3,2)=1; se(2,1,2)=1; se(3,2,2)=1; se(1,2,2)=1;
+B=imdilate(A,se);
+C=B-A;
+SPS3= sum(C(:))/sum(A(:))
+
+% surf(A)
+% surf(B)
+
+D=imerode(A,ones(3,3,3));
+G=imdilate(A,ones(3,3,3));
+
+surf(A)
+surf(D)
+surf(G)
+
+
+
+
+
+
+

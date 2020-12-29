@@ -1,0 +1,34 @@
+% importing mat file and visualization slice by slice
+figure; 
+load('MAT/A.mat')
+S=size(A);
+for I=1:S(3)
+clf;
+imagesc(squeeze(A(I,:,:))); axis equal tight
+drawnow;
+end
+
+% importing binary png sequence
+D=dir('PNG/*.png');
+A=zeros(200,200,200);
+for I=1:numel(D)
+   t=imread(['PNG/' D(I).name]); 
+   t=(t==255);
+   A(:,:,I)=t;
+end
+
+% importing rgb jpg sequence
+A=imread('JPG/A.jpg');
+A=mean(A,3);
+A=double(A);
+A=imgaussfilt(A);
+% A(A>150)=150;
+B=A>100;
+% B=imbinarize(A);
+figure; imagesc(B)
+
+
+
+
+
+
