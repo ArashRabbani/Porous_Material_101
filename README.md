@@ -3,6 +3,14 @@ Tutorial repository of introduction to porous materials using MATLAB
 
 Tutorial Youtube Playlist: https://www.youtube.com/watch?v=zqFISBryLxk&list=PLaYes2m4FtR3DBM7TIb6oOZYI-tG4fHLd
 
+
+
+
+
+[<img src="https://github.com/ArashRabbani/Porous_Material_101/blob/main/img/1.jpg">](https://www.youtube.com/watch?v=zqFISBryLxk&t=231s)
+
+
+
 ![](https://github.com/ArashRabbani/Porous_Material_101/blob/main/img/1.jpg)
 [Video Link](https://www.youtube.com/watch?v=zqFISBryLxk&t=231s)
 <br>
